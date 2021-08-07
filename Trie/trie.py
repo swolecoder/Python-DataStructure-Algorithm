@@ -13,7 +13,7 @@ class Trie(object):
     def __init__(self):
  
         self.root = TrieNode("")
-     
+    #  O(K) - K being the length of the word
     def insert(self, word):
  
         node = self.root
@@ -36,7 +36,7 @@ class Trie(object):
          
         for child in node.children.values():
             self.dfs(child, pre + node.char)
-         
+      #  O(K) - K being the length of the word  
     def search(self, x):
         
         node = self.root
